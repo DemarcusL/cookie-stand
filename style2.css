@@ -1,0 +1,23 @@
+* {
+background-color: olive;
+color: brown;
+
+}
+
+.title {
+text-align: center;
+
+}
+
+.list {
+text-decoration: overline;
+text-align: left;
+
+}
+
+
+img {
+height: 70px;
+
+
+}
