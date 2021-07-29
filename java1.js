@@ -270,6 +270,15 @@ let limaStore = // define object literal
 
 }
 
+
+
+
+
+// let btnGet = document.querySelector('button');
+// let myTable = document.querySelector('#table');
+
+// btnGet.
+//we failed to call the functions before. must do this, calling it out the object
 seattleStore.render();
 tokyoStore.render();
 dubaiStore.render();

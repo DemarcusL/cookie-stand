@@ -1,23 +1,32 @@
-* {
-background-color: olive;
-color: brown;
-
+* {background-color: rgba(252, 228, 236, 0.904);
+font-family: 'WindSong', cursive;
 }
 
-.title {
-text-align: center;
-
+/* body {
+  text-align: center;
 }
 
-.list {
-text-decoration: overline;
-text-align: left;
+div {
+  display: inline-block;
+}
 
+button {
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+#table {
+  display: block;
+  margin-top: 20px;
+} */
+
+th, td {
+  border: 2px solid rgb(133, 66, 27);
+  padding: 5px;
 }
 
 
 img {
 height: 70px;
-
-
 }
+
