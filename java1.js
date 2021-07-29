@@ -270,7 +270,28 @@ let limaStore = // define object literal
 
 }
 
-
+function tableFunction(){
+    let table = document.getElementById("myTable");
+    let row = table.insertRow();
+    let cell1 = row.insertCell();
+    let cell2 = row.insertCell();
+    let cell3 = row.insertCell();
+    let cell4 = row.insertCell();
+    let cell5 = row.insertCell();
+    let cell6 = row.insertCell();
+    let cell7 = row.insertCell();
+    let cell8 = row.insertCell();
+    let cell9 = row.insertCell();
+    let cell10 = row.insertCell();
+    let cell11= row.insertCell();
+    let cell12= row.insertCell();
+    let cell13= row.insertCell();
+    let cell14= row.insertCell();
+    cell1.innerHTML = "341";
+    cell2.innerHTML = "234";
+    cell3.innerHTML = "241";
+    cell4.innerHTML = "341";
+} 
 
 
 
@@ -284,3 +305,4 @@ tokyoStore.render();
 dubaiStore.render();
 parisStore.render();
 limaStore.render();
+tableFunction();
