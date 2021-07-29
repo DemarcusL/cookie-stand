@@ -46,18 +46,32 @@ let seattleStore = // define object literal
     },
 
     //Used to get the data generated to print to the sales html from Kev's walkthrough
-    render() {
+    // render() {
+    //     this.getCookiesSoldPerHour();
+    //     const unorderedList = document.getElementById('seattle');// this is id'd in the html
+    //     for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+    //     {
+    //         const listItem = document.createElement('li'); //make listed items
+    //         listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+    //         unorderedList.appendChild(listItem);
+    //     }
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+    //     unorderedList.appendChild(listItem);
+    // },
+
+        render() {
         this.getCookiesSoldPerHour();
-        const unorderedList = document.getElementById('seattle');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+        const tableRow = document.getElementById('Sea');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) 
         {
-            const listItem = document.createElement('li'); //make listed items
-            listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            unorderedList.appendChild(listItem);
+            const tableCell = document.createElement('td'); 
+            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+            tableCell.appendChild(tableRow);
         }
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(listItem);
+        const tableCell = document.createElement('td');
+        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+        unorderedList.appendChild(tableRow);
     }
 
 }
@@ -98,19 +112,33 @@ let tokyoStore = // define object literal
     },
 
     //Used to get the data generated to print to the sales html from Kev's walkthrough
-    render() {
+    // render() {
+    //     this.getCookiesSoldPerHour();
+    //     const unorderedList = document.getElementById('tokyo');// this is id'd in the html
+    //     for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+    //     {
+    //         const listItem = document.createElement('li'); //make listed items
+    //         listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+    //         unorderedList.appendChild(listItem);
+    //     }
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+    //     unorderedList.appendChild(listItem);
+    // },
+        render() {
         this.getCookiesSoldPerHour();
-        const unorderedList = document.getElementById('tokyo');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+        const tableRow = document.getElementById('tok');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) 
         {
-            const listItem = document.createElement('li'); //make listed items
-            listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            unorderedList.appendChild(listItem);
+            const tableCell = document.createElement('td'); 
+            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+            tableCell.appendChild(tableRow);
         }
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(listItem);
+        const tableCell = document.createElement('td');
+        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+        unorderedList.appendChild(tableRow);
     }
+
 
 }
 
@@ -150,20 +178,32 @@ let dubaiStore = // define object literal
     },
 
     //Used to get the data generated to print to the sales html from Kev's walkthrough
-    render() {
+    // render() {
+    //     this.getCookiesSoldPerHour();
+    //     const unorderedList = document.getElementById('dubai');// this is id'd in the html
+    //     for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+    //     {
+    //         const listItem = document.createElement('li'); //make listed items
+    //         listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+    //         unorderedList.appendChild(listItem);
+    //     }
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+    //     unorderedList.appendChild(listItem);
+    // },
+        render() {
         this.getCookiesSoldPerHour();
-        const unorderedList = document.getElementById('dubai');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+        const tableRow = document.getElementById('dub');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) 
         {
-            const listItem = document.createElement('li'); //make listed items
-            listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            unorderedList.appendChild(listItem);
+            const tableCell = document.createElement('td'); 
+            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+            tableCell.appendChild(tableRow);
         }
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(listItem);
+        const tableCell = document.createElement('td');
+        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+        unorderedList.appendChild(tableRow);
     }
-
 }
 
 let parisStore = // define object literal
@@ -202,20 +242,32 @@ let parisStore = // define object literal
     },
 
     //Used to get the data generated to print to the sales html from Kev's walkthrough
-    render() {
+    // render() {
+    //     this.getCookiesSoldPerHour();
+    //     const unorderedList = document.getElementById('paris');// this is id'd in the html
+    //     for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+    //     {
+    //         const listItem = document.createElement('li'); //make listed items
+    //         listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+    //         unorderedList.appendChild(listItem);
+    //     }
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+    //     unorderedList.appendChild(listItem);
+    // },
+        render() {
         this.getCookiesSoldPerHour();
-        const unorderedList = document.getElementById('paris');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+        const tableRow = document.getElementById('par');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) 
         {
-            const listItem = document.createElement('li'); //make listed items
-            listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            unorderedList.appendChild(listItem);
+            const tableCell = document.createElement('td'); 
+            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+            tableCell.appendChild(tableRow);
         }
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(listItem);
+        const tableCell = document.createElement('td');
+        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+        unorderedList.appendChild(tableRow);
     }
-
 }
 
 let limaStore = // define object literal
@@ -254,48 +306,52 @@ let limaStore = // define object literal
     },
 
     //Used to get the data generated to print to the sales html from Kev's walkthrough
-    render() {
+    // render() {
+    //     this.getCookiesSoldPerHour();
+    //     const unorderedList = document.getElementById('lima');// this is id'd in the html
+    //     for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+    //     {
+    //         const listItem = document.createElement('li'); //make listed items
+    //         listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+    //         unorderedList.appendChild(listItem);
+    //     }
+    //     const listItem = document.createElement('li');
+    //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+    //     unorderedList.appendChild(listItem);
+    // },
+        render() {
         this.getCookiesSoldPerHour();
-        const unorderedList = document.getElementById('lima');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) //this will keep iterating until the hours are met
+        const tableRow = document.getElementById('lim');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) 
         {
-            const listItem = document.createElement('li'); //make listed items
-            listItem.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            unorderedList.appendChild(listItem);
+            const tableCell = document.createElement('td'); 
+            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
+            tableCell.appendChild(tableRow);
         }
-        const listItem = document.createElement('li');
-        listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(listItem);
+        const tableCell = document.createElement('td');
+        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
+        unorderedList.appendChild(tableRow);
     }
-
 }
 
 
 
-function tableFunction(){
-    let table = document.getElementById("myTable");
-    let row = table.insertRow();
-    let cell1 = row.insertCell();
-    let cell2 = row.insertCell();
-    let cell3 = row.insertCell();
-    let cell4 = row.insertCell();
-    let cell5 = row.insertCell();
-    let cell6 = row.insertCell();
-    let cell7 = row.insertCell();
-    let cell8 = row.insertCell();
-    let cell9 = row.insertCell();
-    let cell10 = row.insertCell();
-    let cell11= row.insertCell();
-    let cell12= row.insertCell();
-    let cell13= row.insertCell();
-    let cell14= row.insertCell();
-    cell2.innerHTML = document.getElementById('seattle');
-    cell3.innerHTML = document.getElementById('tokyo')
-    cell4.innerHTML = document.getElementById('dubai');
-    cell5.innerHTML = document.getElementById('paris');
-    cell6.innerHTML = document.getElementById('lima')
+// function tableFunction(){
+//     let table = document.getElementById("myTable");
+//     let row = table.insertRow();
+//     let cell1 = row.insertCell();
+// //     let cell2 = row.insertCell();
+// //     let cell3 = row.insertCell();
+// //     let cell4 = row.insertCell();
+// //     let cell5 = row.insertCell();
+// //     let cell6 = row.insertCell();
+//     cell2.innerHTML = document.getElementById('seattle');
+// //     cell3.innerHTML = document.getElementById('tokyo')
+// //     cell4.innerHTML = document.getElementById('dubai');
+// //     cell5.innerHTML = document.getElementById('paris');
+// //     cell6.innerHTML = document.getElementById('lima')
 
-} 
+// } 
 
 
 
@@ -309,4 +365,4 @@ tokyoStore.render();
 dubaiStore.render();
 parisStore.render();
 limaStore.render();
-tableFunction();
+// tableFunction();
