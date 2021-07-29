@@ -270,6 +270,8 @@ let limaStore = // define object literal
 
 }
 
+
+
 function tableFunction(){
     let table = document.getElementById("myTable");
     let row = table.insertRow();
@@ -287,10 +289,12 @@ function tableFunction(){
     let cell12= row.insertCell();
     let cell13= row.insertCell();
     let cell14= row.insertCell();
-    cell2.innerHTML = "#";
-    cell3.innerHTML = "#";
-    cell4.innerHTML = "#";
-    cell5.innerHTML = "#";
+    cell2.innerHTML = document.getElementById('seattle');
+    cell3.innerHTML = document.getElementById('tokyo')
+    cell4.innerHTML = document.getElementById('dubai');
+    cell5.innerHTML = document.getElementById('paris');
+    cell6.innerHTML = document.getElementById('lima')
+
 } 
 
 
