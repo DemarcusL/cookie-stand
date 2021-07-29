@@ -287,10 +287,10 @@ function tableFunction(){
     let cell12= row.insertCell();
     let cell13= row.insertCell();
     let cell14= row.insertCell();
-    cell1.innerHTML = "341";
-    cell2.innerHTML = "234";
-    cell3.innerHTML = "241";
-    cell4.innerHTML = "341";
+    cell2.innerHTML = "#";
+    cell3.innerHTML = "#";
+    cell4.innerHTML = "#";
+    cell5.innerHTML = "#";
 } 
 
 
