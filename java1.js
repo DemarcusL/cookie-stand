@@ -10,6 +10,10 @@ function getRandomNumOfCustomerGivenRange(minimumCustomers, maximumCustomers) { 
 //The hours of operation
 const openHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+const TableEl = document.getElementById("myTable");
+var totalOfTotals = 0; 
+// we set these const so our table wont overlap and start at a 0 starting array as well as link to myTable
+
 let seattleStore = // define object literal
 {   //define props
     minimumCustomers: 23,//data provided
@@ -33,7 +37,7 @@ let seattleStore = // define object literal
 
     //We are writting the functions now. We havent CALLED THE FUNCTION them yet by not writting a paran
     //still a method
-    getCookiesSoldPerHour: function() {
+    getCookiesSoldPerHour: function () {
         totalDailyCookies = 0;// set to 0 to start off
         this.getCustomerPerHour();
         for (let index = 0; index < this.customersPerHour.length; index++) {
@@ -41,7 +45,7 @@ let seattleStore = // define object literal
 
             this.cookiesSoldPerHour.push(dailyCookies);
 
-            this.totalDailyCookies+=dailyCookies;
+            this.totalDailyCookies += dailyCookies;
         }
     },
 
@@ -60,18 +64,24 @@ let seattleStore = // define object literal
     //     unorderedList.appendChild(listItem);
     // },
 
-        render() {
+    render() {
+        const seattleRowEl = document.createElement("tr");
+        let seattleRowData = document.createElement("td");
+        seattleRowData.textContent = "Seattle";
+        seattleRowEl.appendChild(seattleRowData);
+
+
         this.getCookiesSoldPerHour();
         const tableRow = document.getElementById('Sea');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) 
-        {
-            const tableCell = document.createElement('td'); 
-            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            tableCell.appendChild(tableRow);
+        for (let i = 0; i < openHours.length; i++) {
+            seattleRowData = document.createElement("td");
+            seattleRowData.textContent = this.cookiesSoldPerHour[i];
+            seattleRowEl.appendChild(seattleRowData);
         }
-        const tableCell = document.createElement('td');
-        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(tableRow);
+        seattleRowData = document.createElement("td");
+        seattleRowData.textContent = this.totalDailyCookies;
+        seattleRowEl.appendChild(seattleRowData);
+        TableEl.appendChild(seattleRowEl);
     }
 
 }
@@ -99,7 +109,7 @@ let tokyoStore = // define object literal
 
     //We are writting the functions now. We havent CALLED THE FUNCTION them yet by not writting a paran
     //still a method
-    getCookiesSoldPerHour: function() {
+    getCookiesSoldPerHour: function () {
         totalDailyCookies = 0;// set to 0 to start off
         this.getCustomerPerHour();
         for (let index = 0; index < this.customersPerHour.length; index++) {
@@ -107,7 +117,7 @@ let tokyoStore = // define object literal
 
             this.cookiesSoldPerHour.push(dailyCookies);
 
-            this.totalDailyCookies+=dailyCookies;
+            this.totalDailyCookies += dailyCookies;
         }
     },
 
@@ -125,20 +135,25 @@ let tokyoStore = // define object literal
     //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
     //     unorderedList.appendChild(listItem);
     // },
-        render() {
-        this.getCookiesSoldPerHour();
-        const tableRow = document.getElementById('tok');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) 
-        {
-            const tableCell = document.createElement('td'); 
-            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            tableCell.appendChild(tableRow);
-        }
-        const tableCell = document.createElement('td');
-        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(tableRow);
-    }
+    render() {
+        const tokyoRowEl = document.createElement("tr");
+        let tokyoRowData = document.createElement("td");
+        tokyoRowData.textContent = "Tokyo";
+        tokyoRowEl.appendChild(tokyoRowData);
 
+
+        this.getCookiesSoldPerHour();
+        const tableRow = document.getElementById('Tok');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) {
+            tokyoRowData = document.createElement("td");
+            tokyoRowData.textContent = this.cookiesSoldPerHour[i];
+            tokyoRowEl.appendChild(tokyoRowData);
+        }
+        tokyoRowData = document.createElement("td");
+        tokyoRowData.textContent = this.totalDailyCookies;
+        tokyoRowEl.appendChild(tokyoRowData);
+        TableEl.appendChild(tokyoRowEl);
+    }
 
 }
 
@@ -165,7 +180,7 @@ let dubaiStore = // define object literal
 
     //We are writting the functions now. We havent CALLED THE FUNCTION them yet by not writting a paran
     //still a method
-    getCookiesSoldPerHour: function() {
+    getCookiesSoldPerHour: function () {
         totalDailyCookies = 0;// set to 0 to start off
         this.getCustomerPerHour();
         for (let index = 0; index < this.customersPerHour.length; index++) {
@@ -173,7 +188,7 @@ let dubaiStore = // define object literal
 
             this.cookiesSoldPerHour.push(dailyCookies);
 
-            this.totalDailyCookies+=dailyCookies;
+            this.totalDailyCookies += dailyCookies;
         }
     },
 
@@ -191,20 +206,28 @@ let dubaiStore = // define object literal
     //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
     //     unorderedList.appendChild(listItem);
     // },
-        render() {
+    render() {
+        const dubaiRowEl = document.createElement("tr");
+        let dubaiRowData = document.createElement("td");
+        dubaiRowData.textContent = "Dubai";
+        dubaiRowEl.appendChild(dubaiRowData);
+
+
         this.getCookiesSoldPerHour();
-        const tableRow = document.getElementById('dub');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) 
-        {
-            const tableCell = document.createElement('td'); 
-            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            tableCell.appendChild(tableRow);
+        const tableRow = document.getElementById('Sea');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) {
+            dubaiRowData = document.createElement("td");
+            dubaiRowData.textContent = this.cookiesSoldPerHour[i];
+            dubaiRowEl.appendChild(dubaiRowData);
         }
-        const tableCell = document.createElement('td');
-        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(tableRow);
+        dubaiRowData = document.createElement("td");
+        dubaiRowData.textContent = this.totalDailyCookies;
+        dubaiRowEl.appendChild(dubaiRowData);
+        TableEl.appendChild(dubaiRowEl);
     }
+
 }
+
 
 let parisStore = // define object literal
 {   //define props
@@ -229,7 +252,7 @@ let parisStore = // define object literal
 
     //We are writting the functions now. We havent CALLED THE FUNCTION them yet by not writting a paran
     //still a method
-    getCookiesSoldPerHour: function() {
+    getCookiesSoldPerHour: function () {
         totalDailyCookies = 0;// set to 0 to start off
         this.getCustomerPerHour();
         for (let index = 0; index < this.customersPerHour.length; index++) {
@@ -237,7 +260,7 @@ let parisStore = // define object literal
 
             this.cookiesSoldPerHour.push(dailyCookies);
 
-            this.totalDailyCookies+=dailyCookies;
+            this.totalDailyCookies += dailyCookies;
         }
     },
 
@@ -255,18 +278,24 @@ let parisStore = // define object literal
     //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
     //     unorderedList.appendChild(listItem);
     // },
-        render() {
+    render() {
+        const parisRowEl = document.createElement("tr");
+        let parisRowData = document.createElement("td");
+        parisRowData.textContent = "Paris";
+        parisRowEl.appendChild(parisRowData);
+
+
         this.getCookiesSoldPerHour();
-        const tableRow = document.getElementById('par');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) 
-        {
-            const tableCell = document.createElement('td'); 
-            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            tableCell.appendChild(tableRow);
+        const tableRow = document.getElementById('Par');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) {
+            parisRowData = document.createElement("td");
+            parisRowData.textContent = this.cookiesSoldPerHour[i];
+            parisRowEl.appendChild(parisRowData);
         }
-        const tableCell = document.createElement('td');
-        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(tableRow);
+        parisRowData = document.createElement("td");
+        parisRowData.textContent = this.totalDailyCookies;
+        parisRowEl.appendChild(parisRowData);
+        TableEl.appendChild(parisRowEl);
     }
 }
 
@@ -293,7 +322,7 @@ let limaStore = // define object literal
 
     //We are writting the functions now. We havent CALLED THE FUNCTION them yet by not writting a paran
     //still a method
-    getCookiesSoldPerHour: function() {
+    getCookiesSoldPerHour: function () {
         totalDailyCookies = 0;// set to 0 to start off
         this.getCustomerPerHour();
         for (let index = 0; index < this.customersPerHour.length; index++) {
@@ -301,7 +330,7 @@ let limaStore = // define object literal
 
             this.cookiesSoldPerHour.push(dailyCookies);
 
-            this.totalDailyCookies+=dailyCookies;
+            this.totalDailyCookies += dailyCookies;
         }
     },
 
@@ -319,18 +348,24 @@ let limaStore = // define object literal
     //     listItem.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
     //     unorderedList.appendChild(listItem);
     // },
-        render() {
+    render() {
+        const limaRowEl = document.createElement("tr");
+        let limaRowData = document.createElement("td");
+        limaRowData.textContent = "Lima";
+        limaRowEl.appendChild(limaRowData);
+
+
         this.getCookiesSoldPerHour();
-        const tableRow = document.getElementById('lim');// this is id'd in the html
-        for (let i = 0; i < openHours.length; i++) 
-        {
-            const tableCell = document.createElement('td'); 
-            tableCell.textContent = openHours[i] + ': ' + this.cookiesSoldPerHour[i] + ' cookies'; 
-            tableCell.appendChild(tableRow);
-        }
-        const tableCell = document.createElement('td');
-        tableCell.textContent = 'Total: ' + this.totalDailyCookies + ' cookies';
-        unorderedList.appendChild(tableRow);
+        const tableRow = document.getElementById('Lim');// this is id'd in the html
+        for (let i = 0; i < openHours.length; i++) {
+            limaRowData = document.createElement("td");
+            limaRowData.textContent = this.cookiesSoldPerHour[i];
+            limaRowEl.appendChild(limaRowData);
+        } 
+        limaRowData = document.createElement("td");
+        limaRowData.textContent = this.totalDailyCookies;
+        limaRowEl.appendChild(limaRowData);
+        TableEl.appendChild(limaRowEl);
     }
 }
 
