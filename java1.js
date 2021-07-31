@@ -104,6 +104,7 @@ function createFooter() {
 
         for (let h = 0; h < allCookieStands.length; h++) {
             hourlyTotal += allCookieStands[h].cookieEachHour[i];
+                //we overwrite this value here
             grandTotal += allCookieStands[h].cookieEachHour[h];
         }
         let footerHeader = document.createElement("th");
@@ -120,10 +121,10 @@ function createFooter() {
 createHeader();
 
 
-
-//we add an event listener tied to what element we attached to the variable myForm
-// myForm.addEventListener('submit', submitLocation);
-//this event listener should react when we press submit
+let myForm = document.getElementById("nameForm")
+// we add an event listener tied to what element we attached to the variable myForm
+myForm.addEventListener('submit', submitLocation);
+// this event listener should react when we press submit
 
 function submitLocation(evt) {
     evt.preventDefault(); // prevent the default stuff from happening, Kevin example
@@ -133,8 +134,9 @@ function submitLocation(evt) {
     let locmax = evt.target.locmax.value;
     let locavg = evt.target.locavg.value;
     // do with values (eg. add to array)
-    alert(`Thanks for submitting ${locname}, with ${locmin} customers per day, and ${locmax} customers per day with and average of ${locavg}`);
-
+    alert(`Thanks for submitting ${locname} to our data banks !, With ${locmin} minimum customers a day, and ${locmax} maximum customers per day, averaging about ${locavg} customers a day !`);
+     let newLocation = new CookieStand(locname, locmin, locmax, locavg);
+    newLocation.render();
 };
 
 // Let's load up an array with instances of cookie stands
