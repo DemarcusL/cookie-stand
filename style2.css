@@ -3,14 +3,17 @@ font-family: 'Oswald', sans-serif;
 
 }
 
+header {
+text-align: center;
+
+}
+
 body {
 /* background-image: url(https://media.istockphoto.com/photos/cookies-factory-picture-id171301497); */
 background-repeat: none;
 background-color: black;
 color: wheat;
 text-decoration: none;
-
-
 }
 
 .nav-list {
@@ -53,7 +56,17 @@ th, td {
 }
 
 
-img {
+#asset {
 height: 70px;
 }
 
+#fam {
+height: 400px;
+width: 700px;
+margin: 50px;
+
+}
+
+p {
+margin-top: 50px;
+}
