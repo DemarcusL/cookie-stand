@@ -1,24 +1,51 @@
-* {background-color: rgba(252, 228, 236, 0.904);
-font-family: 'WindSong', cursive;
+* {
+font-family: 'Oswald', sans-serif;
+
 }
 
-/* body {
-  text-align: center;
+body {
+/* background-image: url(https://media.istockphoto.com/photos/cookies-factory-picture-id171301497); */
+background-repeat: none;
+background-color: black;
+color: wheat;
+text-decoration: none;
+
+
+}
+
+.nav-list {
+display: inline;
+list-style-type: none;
+margin: 20px;
+border-bottom: 20px;
+overflow: hidden;
+text-align: justify;
+
+}
+
+
+.nav-item1 {
+border: 20px;
+margin-right: 20px;
+float: left;
 }
 
 div {
-  display: inline-block;
+  width: 250px;
+  padding: 10px;
+  border: 5px double gray;
+  margin: 0;
+text-align: center;
 }
 
-button {
-  display: inline-block;
-  padding: 10px 20px;
-}
+#title {
+  width: 320px;
+height: 50px;
+  padding: 10px;
+  border: 5px double gray;
+  margin: 0;
 
-#table {
-  display: block;
-  margin-top: 20px;
-} */
+}
 
 th, td {
   border: 2px solid rgb(133, 66, 27);

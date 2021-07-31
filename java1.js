@@ -14,6 +14,18 @@ const TableEl = document.getElementById("myTable");
 var totalOfTotals = 0; 
 // we set these const so our table wont overlap and start at a 0 starting array as well as link to myTable
 
+// This is where I start trying to build contructors
+// for (let index = 0; index < openHours.length; index++) <- I will need this
+
+
+
+
+
+
+
+
+
+
 let seattleStore = // define object literal
 {   //define props
     minimumCustomers: 23,//data provided
@@ -75,9 +87,9 @@ let seattleStore = // define object literal
         const tableRow = document.getElementById('Sea');// this is id'd in the html
         for (let i = 0; i < openHours.length; i++) {
             seattleRowData = document.createElement("td");
-            seattleRowData.textContent = this.cookiesSoldPerHour[i];
+            seattleRowData.textContent = this.cookiesSoldPerHour[i];//we set a document write and datacell, which will set in the array
             seattleRowEl.appendChild(seattleRowData);
-        }
+        }   //we append, we use this to add the row onto the 
         seattleRowData = document.createElement("td");
         seattleRowData.textContent = this.totalDailyCookies;
         seattleRowEl.appendChild(seattleRowData);
@@ -371,6 +383,37 @@ let limaStore = // define object literal
 
 
 
+// let myForm = document.getElementById('nameform');
+// //we add an event listener tied to what element we attached to the variable myForm
+// myForm.addEventListener('submit', submitLocation);
+// //this event listener should react when we press submit
+
+// function submitLocation(evt) {
+//     evt.preventDefault(); // prevent the default stuff from happening, Kevin example
+//     // alert("form submit"); sanity checks
+//     let locname = evt.target.locname.value;
+//     let locmin = evt.target.locmin.value;
+//     let locmax = evt.target.locmax.value;
+//     let locavg = evt.target.locavg.value;
+//     // do with values (eg. add to array)
+//     alert(`Thanks for submitting ${locname}, with ${locmin} customers per day, and ${locmax} customers per day with and average of ${locavg}`);
+
+// };
+
+
+
+
+
+
+//we failed to call the functions before. must do this, calling it out the object
+seattleStore.render();
+tokyoStore.render();
+dubaiStore.render();
+parisStore.render();
+limaStore.render();
+// tableFunction();
+submitLocation();
+
 // function tableFunction(){
 //     let table = document.getElementById("myTable");
 //     let row = table.insertRow();
@@ -387,17 +430,7 @@ let limaStore = // define object literal
 // //     cell6.innerHTML = document.getElementById('lima')
 
 // } 
-
-
-
 // let btnGet = document.querySelector('button');
 // let myTable = document.querySelector('#table');
 
 // btnGet.
-//we failed to call the functions before. must do this, calling it out the object
-seattleStore.render();
-tokyoStore.render();
-dubaiStore.render();
-parisStore.render();
-limaStore.render();
-// tableFunction();
