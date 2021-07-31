@@ -3,13 +3,17 @@ font-family: 'Oswald', sans-serif;
 
 }
 
+#myTable {
+font-family:'Times New Roman', Times, serif;
+color: darkorange;
+}
+
 header {
 text-align: center;
 
 }
 
 body {
-/* background-image: url(https://media.istockphoto.com/photos/cookies-factory-picture-id171301497); */
 background-repeat: none;
 background-color: black;
 color: wheat;
