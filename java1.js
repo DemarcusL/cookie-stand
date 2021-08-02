@@ -136,12 +136,24 @@ function submitLocation(evt) {
     // do with values (eg. add to array)
     alert(`Thanks for submitting ${locname} to our data banks !, With ${locmin} minimum customers a day, and ${locmax} maximum customers per day, averaging about ${locavg} customers a day !`);
      let newLocation = new CookieStand(locname, locmin, locmax, locavg);
+     allCookieStands.push(newLocation);
+    deleteFooterRow();// we put this here so tht it wouldn't delete the new row it creates.
+    //we needed the new location to be forced into the total above, and delete
     newLocation.render();
+    createFooter();// this one is used for after submitting locations
 };
+
+
+function deleteFooterRow() {
+    let rows = document.getElementsByTagName("tr");
+    document.getElementById("myTable").deleteRow(rows.length-1);
+}
+// the function to remove the row being made after the footer total
+
 
 // Let's load up an array with instances of cookie stands
 let allCookieStands = [
-    new CookieStand('seattle', 23, 65, 6.3),
+    new CookieStand('Seattle', 23, 65, 6.3),
     new CookieStand('tokyo', 3, 24, 1.2),
     new CookieStand('dubai', 11, 38, 3.7),
     new CookieStand('paris', 20, 38, 2.3),
@@ -154,4 +166,4 @@ for (let index = 0; index < allCookieStands.length; index++) {
 
 }
 
-createFooter();
+createFooter(); //this one is for when the pages is loaded the first time, before we add a location.
