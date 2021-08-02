@@ -154,10 +154,10 @@ function deleteFooterRow() {
 // Let's load up an array with instances of cookie stands
 let allCookieStands = [
     new CookieStand('Seattle', 23, 65, 6.3),
-    new CookieStand('tokyo', 3, 24, 1.2),
-    new CookieStand('dubai', 11, 38, 3.7),
-    new CookieStand('paris', 20, 38, 2.3),
-    new CookieStand('lima', 2, 16, 4.6),
+    new CookieStand('Tokyo', 3, 24, 1.2),
+    new CookieStand('Dubai', 11, 38, 3.7),
+    new CookieStand('Paris', 20, 38, 2.3),
+    new CookieStand('Lima', 2, 16, 4.6),
 ];
 
 // Iterate through the array of stands and render each one
